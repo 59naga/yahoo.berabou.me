@@ -1,0 +1,44 @@
+body
+  >header
+    fixed 0 0 false 0
+    z-index 500
+    
+  >footer
+    fixed false 0 0 0
+    z-index 500
+    
+  >main
+    padding 6rem 3rem
+    +media-query(all,max-width 640px)
+      padding 64px 0
+    
+    display block
+    position relative
+
+// 結果件数は右揃えで表示する
+md-input-container + aside
+  text-align right
+
+// 件数番号は左揃えでおおきく
+h4.md-avatar
+  padding .8em 0
+  font-size 1.5em
+
+// md-toolber内checkboxを置くとyがズレるので調整
+md-checkbox
+  .md-label
+    position absolute
+    height 100%
+    &:before
+      display inline-block
+      vertical-align middle
+      content " "
+      height 100%
+
+// 何件目かは右揃えで見たい
+.md-avatar
+  text-align right
+
+// z-indexで期間指定が隠れる
+.md-select-menu-container
+  z-index 600

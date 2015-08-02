@@ -1,0 +1,20 @@
+md-toolbar
+  form.md-toolbar-tools(ng-submit="header.search()" layout="rows")
+    h2(flex) yahoo.berabou.me
+
+    md-checkbox(
+      flex
+      ng-model="$storage.ignoreDuplicateDomain"
+      aria-label="ignore duplicate domain"
+    )
+      | 重複ドメインを無視
+
+    md-select(
+      flex="20"
+      placeholder='期間指定'
+      ng-model='$storage.period'
+    )
+      md-option なし
+      md-option(ng-repeat='period in header.periods' value='{{period.vd}}') {{period.label}}
+
+    button(style="display:none")

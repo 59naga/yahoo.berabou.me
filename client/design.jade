@@ -1,0 +1,41 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no")
+
+    title yahoo.berabou.me β
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+    script(src="pkgs.js")
+    script(src="index.js")
+    link(rel="stylesheet" href="index.css")
+    
+  body
+    header.md-whiteframe-z4
+      include root/header
+    main
+      md-content.md-whiteframe-z4
+        md-list
+          md-list-item(layout="rows")
+            md-input-container(flex="80")
+              label 検索キーワードを入力して下さい
+              input
+            aside(flex)
+              p 00 件
+
+        .item
+          - for (var i = 0; i <= 100; ++i) {
+            div
+              md-divider
+              md-list-item(ng-click).md-3-line
+                h4.md-avatar #{i}
+                .md-list-item-text
+                  h2: a(ng-href="http://example.com/") http://example.com/
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam qui sequi eum repudiandae expedita dolorum fugit, eligendi assumenda asperiores aspernatur, repellat similique mollitia sit non eaque nulla suscipit laudantium!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus commodi laudantium similique vel accusantium quo corrupti. Molestias delectus illum facere nulla. Excepturi saepe praesentium asperiores ipsa a non, accusantium iste.
+          - }
+
+    footer
+      include root/footer
