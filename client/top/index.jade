@@ -10,7 +10,7 @@ md-content.md-whiteframe-z4
 
     .item(ng-repeat="item in top.items")
       div
-        md-divider
+        md-divider(ng-show="$index>0")
         md-list-item.md-3-line
           h4.md-avatar {{$index+1}}
           .md-list-item-text(md-ink-ripple)
