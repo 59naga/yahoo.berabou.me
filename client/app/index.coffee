@@ -19,7 +19,8 @@ app.run ($rootScope,$window,$localStorage)->
 
   $rootScope.$storage= $localStorage.$default {
     words: 'UE4.8.3'
-    period: ''
+    period: 'd'
+    ignoreDuplicateDomain: true
     scrollY: 0
   }
 
